@@ -15,7 +15,18 @@ public class User {
     private boolean admin;
 
     
-    //Full Constructor
+    /**
+     * Full constructor for the object User
+     * @param id: will store the id that will be unique and incremented by the DB
+     * @param score: will store the overall score of the user. this will be used to set up the level of the person
+     * @param level: this will be calculated by a method and based on the score of the user
+     * @param age: self explanatory. will be useful for some ranking added later
+     * @param name: the name of the user( full name)
+     * @param userId: the chosen  username. will be used for login and displaying of ranking.
+     * @param pwd: password for the user. will be eventually hashed
+     * @param sex: sex of the user. will be used for ranking and statistics.
+     * @param admin : boolean... does the user is allowed to add words to the DB and other functionalities
+     */
     public User(int id, int score, int level, int age, String name, String userId, String pwd, String sex, boolean admin) {
         this.id = id;
         this.score = score;
@@ -27,7 +38,15 @@ public class User {
         this.sex = sex;
         this.admin = admin;
     }
-//Constructor for Signing up
+/**Constructor for Signing up
+ * <p> this constructor will only be used for the sign up operation.</p>
+ * 
+ * @param age self explanatory. will be useful for some ranking added later
+ * @param name the name of the user( full name)
+ * @param userId the chosen  username. will be used for login and displaying of ranking.
+ * @param pwd: password for the user. will be eventually hashed
+ * @param sex : sex of the user. will be used for ranking and statistics.
+ */
     public User(int age, String name, String userId, String pwd, String sex) {
         this.age = age;
         this.name = name;
@@ -35,7 +54,10 @@ public class User {
         this.pwd = pwd;
         this.sex = sex;
     }
-
+/**
+ * 
+ * @return score of the player
+ */
     public int getScore() {
         return score;
     }

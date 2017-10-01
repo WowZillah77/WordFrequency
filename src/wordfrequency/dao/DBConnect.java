@@ -6,18 +6,24 @@
 package wordfrequency.dao;
 
 /**
- *
+ *Deal with the connection to the DB
  * @author david
  */
 import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
+
 public class DBConnect {
 
 
     private static Connection conn = null;
     final static String URL = "jdbc:mysql://localhost/WordFrequency";
-
+/**
+ * this method will connect to the DB
+ * 
+ * replace  **user ** and *** password *** by the credential of the DB to be used
+ * @return : connection to be use to all DB access
+ */
     public static Connection getConnection() {
 
         if (conn == null) {

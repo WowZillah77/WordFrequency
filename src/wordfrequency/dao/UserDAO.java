@@ -5,7 +5,6 @@
  */
 package wordfrequency.dao;
 
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +23,7 @@ public class UserDAO {
     
     /**
      * this method will create a user in the DB based on the object created at sign up
-     * @param user: an instance of the object user that will be use to get the data needed for an injection DB
+     * @param user: an instance of the object user that will be used to get the data needed for an injection DB
      * @throws SQLException 
      */
     
@@ -48,6 +47,7 @@ public class UserDAO {
     
     /**
      * this method will read the DB for the credentials of all users signed up
+     * @return 
      * @return: will return a ArrayList of users
      * @throws SQLException 
      */
